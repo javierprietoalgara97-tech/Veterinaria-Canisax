@@ -1866,8 +1866,8 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
     <div class="phase">
       <div class="phase-num">Fase 03</div>
       <h3>Construcción de la plataforma</h3>
-      <p>Panel de altas, motor de recordatorios programados, cola de envíos y bandeja de respuestas,
-      todo conectado al WhatsApp de vuestro número.</p>
+      <p>Panel de altas, motor de recordatorios programados y cola de envíos, todo conectado al
+      WhatsApp de vuestro número.</p>
     </div>
     <div class="phase-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
     <div class="phase">
@@ -1900,7 +1900,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
         <li><strong>Se da de alta una vez.</strong> Nombre, teléfono, animal y tratamiento. Nada más.</li>
         <li><strong>La plataforma cuenta los meses.</strong> Programas «segunda vacuna en 11 meses» y os podéis olvidar.</li>
         <li><strong>El día exacto sale el WhatsApp.</strong> Con el nombre de la clienta y el de su perra.</li>
-        <li><strong>Si responde, lo veis en el panel.</strong> El equipo contesta desde ahí, sin rebuscar en el móvil.</li>
+        <li><strong>Si responde, os llega a vuestro WhatsApp.</strong> La conversación sigue donde siempre, con vuestro equipo.</li>
       </ul>
     </div>
 
@@ -2027,8 +2027,6 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
       <div class="g-cells"><div class="g-bar" style="--s:3;--e:5"></div></div></div>
     <div class="g-row g-task"><div class="g-label">Conexión de WhatsApp sobre vuestro número</div>
       <div class="g-cells"><div class="g-bar" style="--s:3;--e:4"></div></div></div>
-    <div class="g-row g-task"><div class="g-label">Bandeja de respuestas dentro del panel</div>
-      <div class="g-cells"><div class="g-bar" style="--s:4;--e:5"></div></div></div>
 
     <div class="g-row g-phase"><div class="g-label">Fase 04 · Pruebas</div><div class="g-cells"></div></div>
     <div class="g-row g-task"><div class="g-label">Envíos de prueba y calentamiento gradual del número</div>
@@ -2065,7 +2063,6 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
         <li><b>Importación de vuestra base desde CanWid</b><small>Hasta 1.700 fichas cargadas con su animal y su próximo tratamiento, con los teléfonos normalizados.</small></li>
         <li><b>Envío automático por WhatsApp desde vuestro número</b><small>Recordatorios de tratamiento y de cita del día siguiente, en la franja horaria que fijéis.</small></li>
         <li><b>Sistema de protección del número</b><small>Plantillas rotativas, intervalos aleatorios, límite diario, despliegue gradual y baja automática de quien la pida.</small></li>
-        <li><b>Bandeja de respuestas dentro del panel</b><small>El equipo ve y contesta desde la plataforma, con el cliente y el animal delante.</small></li>
         <li><b>Pruebas completas y validación con vosotros</b><small>Hasta dos rondas de ajustes sin coste, dentro del alcance acordado.</small></li>
         <li><b>Formación por videollamada (45 min) y manual en PDF</b><small>Más reuniones de seguimiento semanales durante el desarrollo.</small></li>
         <li><b>Con el mantenimiento (100 €/mes): 3 horas al mes</b><small>De soporte directo, ajustes, plantillas nuevas y nuevos tipos de recordatorio, más una reunión de seguimiento de 30 minutos si hace falta.</small></li>
@@ -2265,8 +2262,8 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
           <div class="item-p">100 €</div>
         </li>
         <li class="item">
-          <div><div class="item-t">Bandeja de respuestas, formación y manual</div>
-            <div class="item-s">Validación con vosotros y puesta en marcha</div></div>
+          <div><div class="item-t">Formación, manual y puesta en marcha</div>
+            <div class="item-s">Sesión de 45 min, manual en PDF y validación con vosotros</div></div>
           <div class="item-p">150 €</div>
         </li>
       </ul>
@@ -2512,9 +2509,6 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
   solicite no recibir más avisos. Estas medidas reducen el riesgo, pero no lo eliminan, en los
   términos de la cláusula 6.</li>
 
-  <li><b>Bandeja de respuestas dentro de la plataforma.</b> Las respuestas de los clientes a los
-  recordatorios se muestran en el panel, donde el equipo puede leerlas y contestarlas, con indicación
-  de a qué cliente, animal y recordatorio corresponden.</li>
 
   <li><b>Pruebas completas y validación con la Clínica.</b> Pruebas internas con números de prueba y
   datos ficticios contra todos los casos de uso, calentamiento gradual del número y entrega a la
@@ -2562,9 +2556,9 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
   facilitada por la Clínica y no se sincroniza en tiempo real con CanWid. Si CanWid dispusiera de una
   interfaz de programación (API) que lo permitiera, la integración se presupuestaría aparte.</li>
 
-  <li><b>Respuesta automática a los clientes.</b> La plataforma envía recordatorios y recoge las
-  respuestas; no responde por sí sola ni interpreta el contenido de los mensajes. La atención de las
-  respuestas corresponde al equipo de la Clínica.</li>
+  <li><b>Gestión de las respuestas de los clientes.</b> La plataforma únicamente envía los
+  recordatorios: no recoge, almacena ni contesta los mensajes que los clientes envíen de vuelta, que
+  llegan al teléfono de la Clínica y cuya atención corresponde en exclusiva a su equipo.</li>
 
   <li><b>Campañas comerciales, promociones o marketing por WhatsApp.</b> La plataforma envía
   recordatorios sanitarios y de cita a clientes de la Clínica; no realiza envíos publicitarios.</li>
@@ -2865,7 +2859,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
 <p>
   Se distinguen dos categorías: la <b>Implementación Específica</b> (la configuración concreta para la
   Clínica: su calendario de tratamientos y ventanas, sus plantillas de mensaje, su base de clientes y
-  animales, su historial de envíos y respuestas, y los ajustes hechos a su medida) y la <b>Metodología
+  animales, su historial de envíos, y los ajustes hechos a su medida) y la <b>Metodología
   Base</b> (el código y la arquitectura general de la plataforma, el motor de recordatorios, la lógica
   de envío y de mitigación de riesgo, y las estructuras genéricas de datos y de mensajes). El Consultor
   cede a la Clínica todos los derechos de uso, modificación y reproducción sobre la Implementación
@@ -2977,8 +2971,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
   <tr><td>Identificativos</td><td>Nombre y apellidos del propietario</td></tr>
   <tr><td>Contacto</td><td>Número de teléfono (WhatsApp) y, si el Responsable lo aporta, correo electrónico</td></tr>
   <tr><td>Animal</td><td>Nombre, especie y, en su caso, raza y fecha de nacimiento</td></tr>
-  <tr><td>Recordatorio</td><td>Tipo de tratamiento o cita, fecha programada del aviso y estado (pendiente, enviado, respondido, dado de baja)</td></tr>
-  <tr><td>Conversación</td><td>Mensaje enviado y respuesta del propietario, si la hubiera</td></tr>
+  <tr><td>Recordatorio</td><td>Tipo de tratamiento o cita, fecha programada del aviso y estado (pendiente, enviado, dado de baja)</td></tr>
 </table>
 <p>
   Los datos relativos al animal <b>no son datos personales de categoría especial</b>: el interesado es
@@ -3048,7 +3041,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
   </tr>
   <tr>
     <td>Supabase (PostgreSQL)</td>
-    <td>Base de datos de clientes, animales, recordatorios y conversaciones</td>
+    <td>Base de datos de clientes, animales y recordatorios</td>
     <td>Región UE (Fráncfort), seleccionada al crear el proyecto</td>
     <td>DPA de Supabase</td>
     <td>0 €/mes (plan gratuito) · ≈ 25 €/mes si se supera su límite</td>
@@ -3317,7 +3310,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
     if (btnEl) btnEl.classList.add('ready');
     nuevaFila('live', 'enviando');
     GUION.filter(s => !s.wait).forEach(pintar);
-    nuevaFila('done', 'respondió');
+    nuevaFila('done', 'enviado');
   }
 
   function lanzarDemo(){
@@ -3371,11 +3364,11 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
       t += step.who === 'out' ? 900 : 1500;
     });
 
-    /* ── E · la respuesta vuelve al panel ── */
+    /* ── E · el recordatorio queda enviado ── */
     t += 400;
     at(t, () => {
-      nuevaFila('done', 'hoy 18:00');
-      if (arrowTxt) arrowTxt.textContent = 'y la respuesta vuelve';
+      nuevaFila('done', 'enviado');
+      if (arrowTxt) arrowTxt.textContent = 'recordatorio enviado';
       if (arrowEl) arrowEl.classList.remove('leap');
     });
   }
