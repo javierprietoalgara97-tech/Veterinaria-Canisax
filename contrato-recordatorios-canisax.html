@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contrato · Plataforma de recordatorios por WhatsApp · Maestría</title>
+<style>
+body{font-family:Inter,'Segoe UI',system-ui,sans-serif;color:#1c1b19;max-width:760px;margin:32px auto;padding:0 24px;font-size:12.5px;line-height:1.55}
+.aviso{background:#fff7dc;border:1px solid #e6cf7a;border-radius:6px;padding:8px 12px;font-size:11.5px;margin-bottom:18px}
+h3{font-size:20px;margin:0 0 4px}.sub{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a7a45;font-weight:700;margin-bottom:18px}
+h4{font-size:14px;margin:22px 0 6px;padding-top:12px;border-top:1px solid #ddd;page-break-after:avoid}h4 span{color:#a3872f;margin-right:6px}
+h5{font-size:12.5px;margin:10px 0 3px}p{margin:0 0 7px}ul,ol{margin:4px 0 8px 20px}li{margin-bottom:3px}
+table{width:100%;border-collapse:collapse;margin:6px 0 10px}td,th{border:1px solid #ddd;padding:5px 8px;text-align:left;font-size:12px;vertical-align:top}
+th{background:#f5f5f5;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.cf{font-weight:700;background:#fff3c4;border-bottom:1.5px solid #c9a84c;padding:0 2px}
+.sig{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:22px;page-break-inside:avoid}.sig>div{border-top:1px solid #bbb;padding-top:8px}.sig .line{height:44px;border-bottom:1px solid #1c1b19;margin:10px 0 4px}
+.anexo{page-break-before:always}
+@page{margin:18mm}
+</style>
+</head>
+<body>
+<div class="aviso">
+  Borrador para revisión legal · v1.0 · Clínica veterinaria. Los textos entre [corchetes] se rellenan
+  con los datos de cada cliente al generar el contrato. <b>Atención especial a la cláusula 6</b>
+  (conexión no oficial de WhatsApp y asunción de riesgo por la Clínica, incluido el bloqueo del
+  número por denuncias de spam — apartado 6.8).
+</div>
+<h3>Acuerdo de prestación de servicios</h3>
+<div class="sub">Plataforma de recordatorios automáticos por WhatsApp · Desarrollo e implementación</div>
+
+<h4><span>1.</span>Partes</h4>
+<p>
+  Este acuerdo se celebra y entra en vigor el <span class="cf" data-f="fecha" data-ph="fecha">[fecha]</span>
+  (“Fecha de Vigencia”) entre <span class="cf" data-f="cliente" data-ph="nombre de la clínica">[nombre de la clínica]</span>,
+  con CIF/NIF <span class="cf" data-f="cif" data-ph="CIF">[CIF]</span> y domicilio en
+  <span class="cf" data-f="direccion" data-ph="dirección">[dirección]</span>, en adelante “la Clínica”,
+  representada por <span class="cf" data-f="firmante" data-ph="firmante">[firmante]</span>
+  en calidad de <span class="cf" data-f="cargo" data-ph="cargo">[cargo]</span>; y
+  <b>Javier Prieto Algara</b>, con NIF <b>48837280T</b>, consultor de automatización e IA que opera
+  bajo la marca comercial <b>Maestría</b>, con domicilio en <b>calle Aljufía 1, Churra, Murcia</b>,
+  en adelante “el Consultor”.
+</p>
+<p>
+  El objeto de este acuerdo es fijar los términos bajo los cuales el Consultor diseñará, construirá
+  y entregará a la Clínica la plataforma descrita en el Alcance del Trabajo. Ambas partes se reconocen
+  capacidad legal suficiente para contratar.
+</p>
+
+<h4><span>2.</span>Alcance del trabajo</h4>
+<h5>2.1 Incluido en la implementación</h5>
+<p>El Consultor se compromete a diseñar, implementar y entregar lo siguiente:</p>
+<ul>
+  <li><b>Reunión de arranque y mapeo de recordatorios.</b> Sesión con el equipo para recoger los
+  tratamientos que la Clínica avisa (vacunas, desparasitaciones, antiparasitarios, revisiones y
+  cualquier otro), su periodicidad, la ventana de renovación de cada uno y el tono de los mensajes.
+  De ahí resulta el calendario de recordatorios de la Clínica.</li>
+
+  <li><b>Plataforma de gestión de recordatorios a medida.</b> Aplicación web privada de la Clínica con:
+  alta y edición de clientes y de sus animales; programación de recordatorios de tratamiento a fecha
+  futura (por ejemplo, “segunda vacuna dentro de once meses”); recordatorios de cita para el día
+  siguiente; cola de envíos programados; historial de lo enviado; y buscador por cliente, animal o
+  tratamiento.</li>
+
+  <li><b>Importación de la base de clientes.</b> Carga inicial de hasta <b>mil setecientas (1.700)</b>
+  fichas a partir de la exportación del software de gestión CanWid que aporte la Clínica, con
+  normalización de números de teléfono y asociación de cada animal a su cliente y a su próximo
+  tratamiento. Las fichas que excedan esa cifra o que requieran depuración manual por errores de
+  origen se tratarán conforme al apartado 2.2.</li>
+
+  <li><b>Envío automático por WhatsApp.</b> Envío de los recordatorios sobre el número de WhatsApp que
+  aporte la Clínica, mediante la conexión descrita en la cláusula 6, en la fecha programada para cada
+  recordatorio y dentro de la franja horaria que fije la Clínica.</li>
+
+  <li><b>Medidas de reducción del riesgo de restricción del número.</b> Uso de varias plantillas de
+  mensaje rotatorias, intervalos aleatorios entre envíos, límite diario de mensajes, despliegue
+  gradual del volumen (“calentamiento” del número) y exclusión automática de todo destinatario que
+  solicite no recibir más avisos. Estas medidas reducen el riesgo, pero no lo eliminan, en los
+  términos de la cláusula 6.</li>
+
+  <li><b>Bandeja de respuestas dentro de la plataforma.</b> Las respuestas de los clientes a los
+  recordatorios se muestran en el panel, donde el equipo puede leerlas y contestarlas, con indicación
+  de a qué cliente, animal y recordatorio corresponden.</li>
+
+  <li><b>Pruebas completas y validación con la Clínica.</b> Pruebas internas con números de prueba y
+  datos ficticios contra todos los casos de uso, calentamiento gradual del número y entrega a la
+  Clínica para su validación, con hasta <b>dos (2) rondas de ajustes</b> sin coste adicional dentro del
+  alcance aquí definido, conforme a la cláusula 3.</li>
+
+  <li><b>Formación del equipo y documentación.</b> Una sesión de formación por videollamada de 45
+  minutos sobre el uso de la plataforma, manual de uso en PDF y reuniones de seguimiento semanales
+  durante el desarrollo.</li>
+
+  <li><b>Mantenimiento mensual (100 €/mes, desde la entrega).</b> Tres (3) horas al mes, no
+  acumulables, de soporte directo, corrección de errores, nuevas plantillas de mensaje, nuevos tipos
+  de recordatorio y consultoría, que incluyen una reunión de seguimiento por videollamada de hasta
+  treinta (30) minutos al mes cuando cualquiera de las partes la considere necesaria, en los
+  términos de la cláusula 3.</li>
+</ul>
+
+<h5>2.2 No incluido</h5>
+<ul>
+  <li><b>Coste de los servicios de terceros</b> relacionados en el apartado 7 del Anexo I. Las
+  cuentas las crea y administra el Consultor desde una cuenta de Google de la Clínica y quedan a
+  nombre de la Clínica; el medio de pago lo introduce siempre la Clínica en cada plataforma. A la
+  fecha de este acuerdo, el coste estimado es el siguiente:
+    <ul>
+      <li><b>Alojamiento de la plataforma (servidor): 5 €/mes aproximadamente.</b></li>
+      <li><b>Base de datos: 0 €/mes</b> con el plan gratuito, suficiente para el volumen de datos
+      previsto al inicio. Si ese volumen se supera, el plan de pago del proveedor asciende a
+      <b>25 €/mes aproximadamente</b>; el Consultor lo comunicará por escrito a la Clínica antes de
+      que el cambio sea necesario.</li>
+      <li><b>Canal de WhatsApp: 0 €.</b> Al emplearse la conexión no oficial descrita en la
+      cláusula 6, no existe coste por mensaje. De migrarse a la API oficial de Meta conforme al
+      apartado 6.6, Meta factura por mensaje (en el momento de la firma, en el entorno de 0,60 € a
+      0,70 € según categoría) y ese coste correría íntegramente a cargo de la Clínica.</li>
+    </ul>
+  Estos importes son estimaciones basadas en las tarifas publicadas por cada proveedor en la fecha
+  de la firma; los fijan los proveedores y pueden variar sin que ello sea imputable al Consultor,
+  que notificará a la Clínica con antelación cualquier cambio de coste previsible.</li>
+
+  <li><b>Tarjeta SIM y número de WhatsApp.</b> Los aporta la Clínica antes del inicio de los trabajos.
+  El número debe estar libre, sin cuenta de WhatsApp activa. El Consultor recomienda expresamente
+  destinar a los envíos un <b>número distinto</b> del que la Clínica usa para la atención diaria, por
+  las razones expuestas en la cláusula 6.</li>
+
+  <li><b>Integración automática con CanWid.</b> La plataforma parte de una exportación de datos
+  facilitada por la Clínica y no se sincroniza en tiempo real con CanWid. Si CanWid dispusiera de una
+  interfaz de programación (API) que lo permitiera, la integración se presupuestaría aparte.</li>
+
+  <li><b>Respuesta automática a los clientes.</b> La plataforma envía recordatorios y recoge las
+  respuestas; no responde por sí sola ni interpreta el contenido de los mensajes. La atención de las
+  respuestas corresponde al equipo de la Clínica.</li>
+
+  <li><b>Campañas comerciales, promociones o marketing por WhatsApp.</b> La plataforma envía
+  recordatorios sanitarios y de cita a clientes de la Clínica; no realiza envíos publicitarios.</li>
+
+  <li><b>Asesoramiento veterinario de cualquier clase.</b> El contenido sanitario de los recordatorios
+  y la definición de los plazos de cada tratamiento corresponden en exclusiva a la Clínica.</li>
+
+  <li>Funciones fuera del alcance acordado e integraciones con sistemas no citados en este acuerdo.
+  Se presupuestarán aparte y por escrito antes de empezar.</li>
+</ul>
+
+<p>
+  El diseño técnico concreto se adaptará a las herramientas y limitaciones de los sistemas de la
+  Clínica. Todo lo no incluido en el apartado 2.1 tendrá la consideración de <b>encargo adicional</b>
+  y deberá acordarse por escrito con su correspondiente presupuesto antes de su ejecución.
+</p>
+
+<h5>Colaboración, comunicación e informes</h5>
+<p>
+  La comunicación ordinaria se realizará por WhatsApp y correo electrónico. Se celebrará una reunión
+  de seguimiento semanal durante el desarrollo. Para urgencias justificadas se habilitará contacto
+  directo por WhatsApp. El Consultor no estará disponible de forma permanente ni a demanda.
+</p>
+
+<h5>Dependencias y plazos</h5>
+<p>
+  El plazo estimado de ejecución es de <b>4 a 5 semanas</b>. El plazo comenzará a computar cuando se
+  cumplan simultáneamente dos condiciones: la recepción del pago de implementación y la entrega por
+  parte de la Clínica de los accesos, credenciales y materiales necesarios (en particular, la
+  exportación de datos de CanWid, la tarjeta SIM y el número de WhatsApp, el acceso a una cuenta de
+  Google de la Clínica, el listado de tratamientos con sus plazos y ventanas, así como la introducción
+  por la Clínica de su medio de pago en cada servicio del Anexo I cuando el Consultor se lo solicite).
+  Cualquier retraso derivado de la falta de respuesta, acceso o materiales por parte de la Clínica
+  suspenderá el cómputo del plazo en la misma medida.
+</p>
+
+<h5>Suscripciones y servicios de terceros</h5>
+<p>
+  Los servicios de terceros necesarios para el funcionamiento de la plataforma son, exclusivamente,
+  los relacionados en el <b>apartado 7 del Anexo I</b>, que constituye la lista única y completa. La
+  Clínica facilitará al Consultor acceso a una <b>cuenta de Google de titularidad de la Clínica</b>;
+  desde ella, y con la autorización expresa que la Clínica otorga mediante la firma de este acuerdo,
+  el Consultor creará y administrará las cuentas de dichos servicios, que quedan <b>a nombre de la
+  Clínica</b>, aceptando en el alta sus condiciones y acuerdos de tratamiento de datos. El coste de
+  los servicios lo asume la Clínica, que introduce su propio medio de pago en cada plataforma a través
+  del enlace que el Consultor le facilite; <b>el Consultor no introducirá en ningún caso medios de pago
+  ni tendrá acceso a ellos</b>. La tarjeta SIM del número la aporta la Clínica. El Consultor notificará
+  con antelación cada alta, cambio o coste previsible, y no responderá de las interrupciones derivadas
+  de la falta de pago de un servicio.
+</p>
+
+<h4><span>3.</span>Compensación y pagos</h4>
+<table>
+  <tr><th>Concepto</th><th>Importe</th><th>Momento</th></tr>
+  <tr><td>Implementación de la plataforma · pago único</td><td><b>500 €</b></td><td>A la firma de este acuerdo. Activa el proyecto.</td></tr>
+  <tr><td>Mantenimiento mensual</td><td><b>100 €/mes</b></td><td>Desde la entrega. Facturado mensualmente.</td></tr>
+</table>
+<p>
+  <b>Total de la implementación: 500 €.</b> Los pagos se realizarán mediante
+  <span class="cf" data-f="pago" data-ph="forma de pago">[forma de pago]</span>. El Consultor emitirá
+  factura por cada pago. Los importes se entienden sin impuestos, que se aplicarán conforme a la
+  legislación vigente.
+</p>
+
+<h5>Validación y aceptación</h5>
+<p>
+  Antes de la puesta en producción, la Clínica probará la plataforma. Si algo no se ajusta a lo
+  descrito en el Alcance del Trabajo, el Consultor lo ajustará y volverá a someterlo a prueba sin
+  coste adicional, dentro del alcance definido en este acuerdo y con un máximo de <b>dos (2) rondas de
+  ajustes</b>. Las modificaciones solicitadas a partir de la tercera ronda, o que excedan el alcance,
+  tendrán la consideración de encargo adicional. La Clínica dispondrá de <b>10 días hábiles</b> desde la
+  entrega para comunicar por escrito y de forma detallada cualquier no conformidad; transcurrido ese
+  plazo sin comunicación, la entrega se considerará aceptada. Las incidencias comunicadas en plazo se
+  subsanarán con diligencia razonable, tras lo cual se abrirá un nuevo período de validación de cinco
+  (5) días hábiles.
+</p>
+
+<h5>Mantenimiento mensual</h5>
+<p>
+  El mantenimiento comprende <b>tres (3) horas al mes</b> de soporte directo, corrección de errores,
+  redacción de nuevas plantillas de mensaje, alta de nuevos tipos de recordatorio y consultoría.
+  Dentro de esas horas se incluye, cuando cualquiera de las partes lo considere necesario, una
+  <b>reunión de seguimiento por videollamada de hasta treinta (30) minutos al mes</b>, que se
+  acordará con al menos 48 horas de antelación y cuya duración se imputa a las horas del mes. Las
+  horas son mensuales y <b>no acumulables</b>: las no consumidas en un mes no se trasladan al siguiente
+  ni dan derecho a reembolso. No incluye nuevas funcionalidades ni cambios estructurales de la
+  plataforma, que se presupuestarán aparte. <b>No tiene permanencia</b>: cualquiera de las partes podrá
+  cancelarlo con 30 días de preaviso por escrito. En caso de impago de una cuota vencida, el Consultor
+  podrá suspender el mantenimiento previa notificación con cinco (5) días hábiles de antelación; la
+  reanudación quedará condicionada a la regularización de los importes pendientes.
+</p>
+
+<h4><span>4.</span>Duración y terminación</h4>
+<p>
+  El acuerdo permanecerá en vigor desde la Fecha de Vigencia hasta la entrega y aceptación de la
+  plataforma y la finalización del mantenimiento contratado. La Clínica podrá terminarlo con <b>30 días
+  de preaviso</b> por escrito; en ese caso el pago de implementación no será reembolsable y la Clínica
+  abonará el trabajo efectivamente realizado hasta la fecha. El Consultor podrá terminarlo con el mismo
+  preaviso, completando el trabajo en curso en la medida de lo posible y facilitando la documentación y
+  los accesos necesarios para la continuidad de la plataforma. Cualquiera de las partes podrá
+  terminarlo de inmediato por incumplimiento material no subsanado en 15 días desde su notificación; si
+  el incumplimiento fuera del Consultor, este reembolsará la parte proporcional de los importes
+  recibidos por servicios no ejecutados en un plazo máximo de 30 días. Las cláusulas de propiedad
+  intelectual, confidencialidad, limitación de responsabilidad, protección de datos y resolución de
+  disputas sobrevivirán a la terminación.
+</p>
+
+<h4><span>5.</span>Relación entre las partes</h4>
+<p>
+  El Consultor actúa como profesional independiente. Nada en este acuerdo crea una relación laboral,
+  societaria o de agencia. El Consultor mantiene el control sobre la forma y los medios con que presta
+  los servicios, asume sus propias obligaciones fiscales y de seguridad social, y se reserva el derecho
+  a prestar servicios similares a otros clientes. Si la Clínica desea exclusividad frente a
+  competidores directos del sector veterinario, deberá acordarse por escrito una cláusula de
+  exclusividad con sus condiciones económicas.
+</p>
+
+<h4><span>6.</span>Conexión con WhatsApp: naturaleza no oficial y asunción de riesgo por la Clínica</h4>
+<p>
+  <b>Esta cláusula es esencial y la Clínica declara haberla leído y comprendido en su integridad antes
+  de firmar.</b>
+</p>
+<h5>6.1 Naturaleza de la conexión</h5>
+<p>
+  Los recordatorios se envían mediante una <b>conexión no oficial</b> con WhatsApp que opera sobre la
+  cuenta de WhatsApp del número aportado por la Clínica, y <b>no</b> a través de la <i>WhatsApp Business
+  Platform</i> (API oficial) de Meta. Esta vía no está autorizada por Meta y su utilización puede
+  constituir un incumplimiento de las Condiciones de Servicio de WhatsApp y de las políticas de uso de
+  Meta.
+</p>
+<h5>6.2 Motivo de esta elección</h5>
+<p>
+  La elección responde a razones de coste expresamente asumidas por la Clínica: la API oficial factura
+  por mensaje de utilidad o de marketing (en el momento de la firma, en el entorno de aproximadamente
+  0,60 € a 0,70 € por mensaje según categoría y tarifas vigentes de Meta), lo que para el volumen de
+  recordatorios previsto por la Clínica supondría un coste recurrente muy superior al de la solución
+  aquí contratada. El Consultor ha informado a la Clínica de ambas alternativas y de sus respectivas
+  implicaciones antes de la firma.
+</p>
+<h5>6.3 Riesgos que la Clínica conoce y asume</h5>
+<p>La Clínica declara conocer y asumir, en particular, los siguientes riesgos:</p>
+<ul>
+  <li>Que Meta puede <b>limitar, suspender o bloquear de forma temporal o definitiva</b> el número y la
+  cuenta de WhatsApp utilizados, en cualquier momento, sin previo aviso y sin que exista un
+  procedimiento de reclamación eficaz garantizado.</li>
+  <li>Que un bloqueo puede conllevar la <b>pérdida del historial de conversaciones</b> asociado a ese
+  número y la imposibilidad de recuperarlo.</li>
+  <li>Que el riesgo aumenta con el volumen de envíos, con la repetición de textos idénticos y, muy
+  especialmente, con que los destinatarios <b>marquen los mensajes como spam</b> o denuncien o
+  bloqueen el número, en los términos del apartado 6.8.</li>
+  <li>Que un cambio en las condiciones, en las políticas o en el funcionamiento técnico de WhatsApp
+  puede dejar la conexión inoperativa, total o parcialmente, sin aviso previo.</li>
+  <li>Que la Clínica es la única responsable del contenido de los mensajes, de la licitud de los envíos
+  y de la relación con sus clientes.</li>
+</ul>
+<h5>6.4 Medidas de mitigación</h5>
+<p>
+  El Consultor aplicará las medidas descritas en el apartado 2.1 (plantillas rotatorias, intervalos
+  aleatorios, límite diario, despliegue gradual del volumen y exclusión automática de quien solicite la
+  baja) y recomienda a la Clínica destinar a los envíos un número distinto del utilizado para la
+  atención diaria. <b>Estas medidas reducen la probabilidad de restricción, pero no la eliminan ni
+  constituyen garantía alguna de continuidad del canal.</b>
+</p>
+<h5>6.5 Exoneración</h5>
+<p>
+  En consecuencia, y como condición esencial de este acuerdo, <b>la Clínica exonera expresamente al
+  Consultor</b> de toda responsabilidad por las restricciones, limitaciones, suspensiones o bloqueos
+  del número o de la cuenta de WhatsApp impuestos por Meta —incluidos los derivados de que los
+  mensajes sean marcados como spam por sus destinatarios, conforme al apartado 6.8—, por la pérdida
+  del historial asociado, por
+  la interrupción del servicio de envíos derivada de ellos y por las consecuencias comerciales,
+  reputacionales o de cualquier otra índole que se sigan de todo lo anterior, así como por cualquier
+  reclamación de terceros, incluida Meta, derivada del uso de esta vía de envío. El Consultor asistirá
+  no obstante a la Clínica, dentro de las horas de mantenimiento, en el intento de recuperación del
+  servicio o en la puesta en marcha sobre un número alternativo.
+</p>
+<h5>6.6 Alternativa oficial</h5>
+<p>
+  La Clínica podrá solicitar en cualquier momento la migración a la API oficial de WhatsApp Business de
+  Meta. Dicha migración se presupuestará como encargo adicional y el coste por mensaje que Meta
+  facture correrá íntegramente a cargo de la Clínica.
+</p>
+<h5>6.7 Obligaciones de la Clínica sobre los destinatarios</h5>
+<p>
+  La Clínica garantiza que los números de teléfono a los que se envían los recordatorios han sido
+  facilitados por sus propios clientes en el marco de la relación de servicio veterinario, que dispone
+  de base jurídica para comunicarse con ellos por ese canal y que atenderá sin dilación cualquier
+  solicitud de baja. La Clínica se obliga a no utilizar la plataforma para envíos publicitarios ni para
+  destinatarios con los que no mantenga una relación previa.
+</p>
+<h5>6.8 Denuncias por spam: asunción expresa del riesgo por la Clínica</h5>
+<p>
+  Las Partes hacen constar expresamente que <b>la causa más frecuente de bloqueo de una cuenta de
+  WhatsApp que realiza envíos programados es que sus propios destinatarios marquen los mensajes como
+  spam o correo no deseado, o denuncien o bloqueen el número</b>. Basta un número reducido de
+  denuncias en un plazo corto para que Meta restrinja, suspenda o bloquee la cuenta de forma
+  automática, sin intervención humana, sin aviso previo y sin un procedimiento de recurso eficaz.
+</p>
+<p>
+  El Consultor no tiene ni puede tener control alguno sobre la reacción de los destinatarios, que son
+  clientes de la Clínica y con quienes la relación la mantiene únicamente la Clínica. En
+  consecuencia, <b>la Clínica asume íntegra y expresamente el riesgo de que su número o su cuenta
+  sean marcados como spam, denunciados, restringidos, suspendidos o bloqueados</b>, cualquiera que
+  sea el número de denuncias y el momento en que se produzcan, y <b>renuncia a reclamar al Consultor
+  por ese motivo</b>, incluidos los daños directos e indirectos, la pérdida del historial de
+  conversaciones, la interrupción de los envíos y el perjuicio comercial o reputacional derivado.
+</p>
+<p>
+  Esta asunción de riesgo alcanza igualmente a las reclamaciones, requerimientos o sanciones que
+  pudieran dirigirse contra la Clínica por parte de sus propios clientes, de Meta o de cualquier
+  autoridad como consecuencia de mensajes considerados no deseados, y la Clínica mantendrá indemne al
+  Consultor frente a ellas en los términos de la cláusula 8. A tal efecto, la Clínica se obliga a
+  enviar exclusivamente recordatorios sanitarios y de cita a clientes con los que mantenga una
+  relación previa, a atender de inmediato toda solicitud de baja y a no reactivar a ningún
+  destinatario que la haya solicitado.
+</p>
+<p>
+  Producido un bloqueo, el Consultor asistirá a la Clínica, dentro de las horas de mantenimiento, en
+  el intento de recuperación del número, en la revisión de los textos que hayan podido motivar las
+  denuncias y en la puesta en marcha sobre un número alternativo, <b>sin que dicha asistencia
+  suponga garantía de éxito ni asunción de responsabilidad alguna</b>. La reconstrucción de la
+  configuración sobre un número nuevo, si excede de esas horas, se tratará como encargo adicional.
+</p>
+
+<h4><span>7.</span>Garantías y limitación de responsabilidad</h4>
+<p>
+  El Consultor garantiza el correcto desarrollo e implementación técnica de la plataforma conforme al
+  Alcance del Trabajo, pero <b>no garantiza resultados comerciales concretos</b> (número de clientes
+  recuperados, citas, renovaciones de tratamiento, ahorro de horas o ingresos), que dependen de
+  variables fuera de su control. Las estimaciones económicas contenidas en la propuesta comercial
+  tienen carácter orientativo, se basan en los datos facilitados por la Clínica y no constituyen
+  compromiso ni garantía de resultado.
+</p>
+<p>
+  El funcionamiento continuado de la plataforma depende de que los servicios de terceros relacionados
+  en el Anexo I se mantengan activos y al corriente de pago; el Consultor no responderá de fallos,
+  cambios o interrupciones en dichos servicios, y las adaptaciones que estos exijan se tratarán como
+  encargo adicional. La disponibilidad del canal de WhatsApp se rige por lo dispuesto en la cláusula 6.
+</p>
+<p>
+  La plataforma es una herramienta de gestión de avisos: <b>no sustituye al criterio veterinario</b>. La
+  definición de los tratamientos, de sus plazos y de sus ventanas de renovación, así como la decisión
+  clínica sobre cada animal, corresponden en exclusiva a la Clínica, que es la única responsable de la
+  atención veterinaria que presta y del uso que haga de la plataforma. El Consultor no responderá de
+  las consecuencias derivadas de datos de partida incorrectos, incompletos o desactualizados
+  facilitados por la Clínica, ni de la falta de recepción o de lectura de un recordatorio por parte de
+  su destinatario.
+</p>
+<p>
+  Ninguna de las partes responderá frente a la otra por daños indirectos ni por lucro cesante. La
+  responsabilidad máxima de cada parte quedará limitada al importe efectivamente pagado bajo este
+  acuerdo en los doce meses anteriores a la reclamación, salvo en casos de dolo o negligencia grave o
+  cuando la ley no permita esta limitación.
+</p>
+
+<h4><span>8.</span>Indemnización</h4>
+<h5>Indemnización del Consultor</h5>
+<p>
+  El Consultor mantendrá indemne a la Clínica frente a reclamaciones de terceros derivadas de: un
+  incumplimiento material y demostrable de este acuerdo; negligencia grave o dolo demostrables del
+  Consultor; la infracción de derechos de propiedad intelectual de terceros por la Metodología Base
+  (salvo que derive de materiales facilitados por la Clínica); o una violación grave de la normativa
+  aplicable imputable al Consultor. Quedan expresamente excluidos los fallos técnicos puntuales,
+  errores menores e incidencias propias del desarrollo e implementación de sistemas tecnológicos,
+  siempre que el Consultor actúe de buena fe y con diligencia razonable en su resolución, así como
+  todo lo cubierto por la exoneración de la cláusula 6.
+</p>
+<h5>Indemnización de la Clínica</h5>
+<p>
+  La Clínica mantendrá indemne al Consultor frente a reclamaciones derivadas de: el uso que la Clínica
+  haga de la plataforma; el contenido de los mensajes enviados y la relación con sus destinatarios;
+  cualquier reclamación de terceros, incluidos sus clientes y Meta, derivada de dicho uso, de que los
+  mensajes sean denunciados como spam (apartado 6.8) o de la atención veterinaria prestada; el incumplimiento por la Clínica de la normativa aplicable, en
+  particular de sus obligaciones como responsable del tratamiento y de información a sus clientes; o la
+  información, datos o materiales facilitados por la Clínica que infrinjan derechos de terceros.
+</p>
+<h5>Aviso y defensa de reclamaciones</h5>
+<p>
+  La parte que solicite ser indemnizada notificará de inmediato y por escrito a la otra cualquier
+  reclamación cubierta, cooperando razonablemente en su defensa. La parte indemnizadora podrá dirigir
+  la defensa, sin alcanzar acuerdos que impongan obligaciones a la parte indemnizada sin su
+  consentimiento previo y por escrito. Las indemnizaciones de esta cláusula quedan sujetas a la
+  limitación de responsabilidad de la cláusula 7, salvo en los supuestos de dolo o negligencia grave.
+</p>
+
+<h4><span>9.</span>Confidencialidad</h4>
+<p>
+  El Consultor mantendrá la confidencialidad de toda la información de la Clínica a la que acceda
+  (datos de clientes y de sus animales, servicios, precios, procesos y estrategias) y la usará
+  únicamente para prestar los servicios. Esta obligación se mantendrá durante <b>2 años</b> tras la
+  terminación. Al término del acuerdo, o a petición de la Clínica, el Consultor devolverá o destruirá
+  la información confidencial en su poder. El Consultor podrá citar a la Clínica como cliente y
+  describir de forma genérica el servicio prestado en su portfolio, sin revelar información
+  confidencial ni detalles técnicos específicos.
+</p>
+
+<h4><span>10.</span>Propiedad intelectual</h4>
+<p>
+  Se distinguen dos categorías: la <b>Implementación Específica</b> (la configuración concreta para la
+  Clínica: su calendario de tratamientos y ventanas, sus plantillas de mensaje, su base de clientes y
+  animales, su historial de envíos y respuestas, y los ajustes hechos a su medida) y la <b>Metodología
+  Base</b> (el código y la arquitectura general de la plataforma, el motor de recordatorios, la lógica
+  de envío y de mitigación de riesgo, y las estructuras genéricas de datos y de mensajes). El Consultor
+  cede a la Clínica todos los derechos de uso, modificación y reproducción sobre la Implementación
+  Específica en el momento de la entrega y una vez efectuado el pago íntegro. El Consultor se reserva
+  todos los derechos sobre la Metodología Base, que la Clínica podrá usar exclusivamente en el marco de
+  la plataforma entregada y que el Consultor podrá reutilizar libremente en otros proyectos. A la
+  terminación del acuerdo, y a petición de la Clínica, el Consultor le entregará en formato
+  reutilizable los datos de la Implementación Específica conforme al apartado 6 del Anexo I.
+</p>
+
+<h4><span>11.</span>Protección de datos</h4>
+<p>
+  La Clínica es la <b>responsable del tratamiento</b> de los datos personales de sus clientes y la
+  única responsable de cumplir el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).
+  El Consultor actúa como <b>encargado del tratamiento</b> en la medida en que acceda a datos
+  personales para prestar los servicios, exclusivamente conforme a las instrucciones documentadas de la
+  Clínica. Los términos de ese encargo se regulan en el <b>Anexo I — Acuerdo de encargado del
+  tratamiento</b>, que forma parte integrante de este acuerdo y se firma junto con él.
+</p>
+<p>
+  Las partes hacen constar que los datos personales tratados son los de los <b>propietarios de los
+  animales</b> (nombre, teléfono y, en su caso, correo electrónico) y los datos <b>de los animales</b>
+  (nombre, especie y tratamiento programado con su fecha). Los datos relativos a animales no
+  constituyen datos personales de categoría especial en el sentido del artículo 9 del RGPD, por lo que
+  el tratamiento no implica categorías especiales de datos. La plataforma se diseña bajo el principio
+  de minimización: no se importan ni registran historiales clínicos, diagnósticos, analíticas ni
+  cualquier otro dato veterinario distinto del tipo de tratamiento y su fecha, necesarios para calcular
+  el aviso.
+</p>
+<h5>Obligaciones de la Clínica</h5>
+<ul>
+  <li>Informar a sus clientes del tratamiento de sus datos y del uso de WhatsApp como canal de aviso,
+  mediante su política de privacidad y las cláusulas informativas que correspondan.</li>
+  <li>Disponer de base jurídica para comunicarse con ellos por WhatsApp y garantizar lo previsto en el
+  apartado 6.7.</li>
+  <li>Facilitar al Consultor acceso a una cuenta de Google de la Clínica y autorizarle, mediante la
+  firma de este acuerdo, a crear y administrar desde ella, a nombre de la Clínica, las cuentas de los
+  servicios de terceros del apartado 7 del Anexo I, introduciendo la propia Clínica su medio de pago en
+  cada plataforma y asumiendo su coste.</li>
+  <li>Atender los derechos de sus clientes, con la asistencia del Consultor prevista en el Anexo I.</li>
+</ul>
+<p>
+  El Consultor configurará los servicios para que no utilicen los datos con fines de entrenamiento de
+  modelos, seleccionará las regiones de la Unión Europea allí donde el proveedor lo permita, aplicará
+  medidas técnicas y organizativas adecuadas, notificará a la Clínica sin dilación indebida cualquier
+  brecha de seguridad y eliminará o devolverá los datos personales a la finalización del acuerdo, todo
+  ello en los términos del Anexo I.
+</p>
+
+<h4><span>12.</span>Resolución de disputas y disposiciones generales</h4>
+<p>
+  Las partes intentarán resolver cualquier controversia de buena fe mediante negociación directa
+  durante 30 días y, en su defecto, mediante mediación. Este acuerdo se rige por la <b>legislación
+  española</b> y las partes se someten a los <b>Juzgados y Tribunales de Murcia</b>. Constituye el
+  acuerdo completo entre las partes y solo podrá modificarse por escrito firmado por ambas. Las
+  notificaciones se realizarán por correo electrónico con acuse de recibo a
+  <span class="cf" data-f="email" data-ph="email de la clínica">[email de la clínica]</span> (la
+  Clínica) y <b>javierprietoalgara97@gmail.com</b> (el Consultor). Si alguna cláusula fuera declarada
+  nula, las restantes conservarán su validez.
+</p>
+
+<h4><span>13.</span>Firmas</h4>
+<p>En prueba de conformidad, las partes firman este acuerdo en la Fecha de Vigencia.</p>
+<div class="sig">
+  <div>
+    <b>LA CLÍNICA</b><br/>
+    <span class="cf" data-f="cliente" data-ph="nombre de la clínica">[nombre de la clínica]</span><br/>
+    <span class="cf" data-f="firmante" data-ph="firmante">[firmante]</span> ·
+    <span class="cf" data-f="cargo" data-ph="cargo">[cargo]</span>
+    <div class="line"></div>
+    Fecha: <span class="cf" data-f="fecha" data-ph="fecha">[fecha]</span>
+  </div>
+  <div>
+    <b>EL CONSULTOR</b><br/>
+    Javier Prieto Algara<br/>
+    Consultor de automatización e IA · Maestría
+    <div class="line"></div>
+    Fecha: <span class="cf" data-f="fecha" data-ph="fecha">[fecha]</span>
+  </div>
+</div>
+
+<div class="anexo" id="anexo1">
+<h3 style="margin-top:2rem">Anexo I · Acuerdo de encargado del tratamiento</h3>
+<div class="sub">Artículo 28 del Reglamento (UE) 2016/679 · Forma parte integrante del acuerdo principal</div>
+
+<h4><span>1.</span>Partes y roles</h4>
+<p>
+  <span class="cf" data-f="cliente" data-ph="nombre de la clínica">[nombre de la clínica]</span>, con
+  CIF/NIF <span class="cf" data-f="cif" data-ph="CIF">[CIF]</span>, en adelante “el Responsable”, y
+  <b>Javier Prieto Algara</b>, con NIF <b>48837280T</b>, que opera bajo la marca comercial Maestría, en
+  adelante “el Encargado”. El Responsable determina los fines y medios del tratamiento de los datos
+  personales de sus clientes; el Encargado los trata por cuenta del Responsable, únicamente para
+  prestar los servicios del acuerdo principal y conforme a sus instrucciones documentadas.
+</p>
+
+<h4><span>2.</span>Objeto, naturaleza y finalidad del tratamiento</h4>
+<p>
+  El Encargado tratará datos personales para <b>enviar recordatorios de tratamiento y de cita a los
+  propietarios de los animales atendidos por el Responsable</b>, a través de una plataforma de gestión
+  de recordatorios y del canal de WhatsApp. Las operaciones de tratamiento son: recogida (a partir de
+  la exportación facilitada por el Responsable y del alta manual por su personal), registro,
+  conservación, consulta, comunicación al canal de mensajería y supresión. La duración coincide con la
+  del acuerdo principal, incluido el mantenimiento mensual mientras esté activo.
+</p>
+
+<h4><span>3.</span>Datos tratados y categorías de interesados</h4>
+<table>
+  <tr><th>Categoría</th><th>Datos</th></tr>
+  <tr><td>Identificativos</td><td>Nombre y apellidos del propietario</td></tr>
+  <tr><td>Contacto</td><td>Número de teléfono (WhatsApp) y, si el Responsable lo aporta, correo electrónico</td></tr>
+  <tr><td>Animal</td><td>Nombre, especie y, en su caso, raza y fecha de nacimiento</td></tr>
+  <tr><td>Recordatorio</td><td>Tipo de tratamiento o cita, fecha programada del aviso y estado (pendiente, enviado, respondido, dado de baja)</td></tr>
+  <tr><td>Conversación</td><td>Mensaje enviado y respuesta del propietario, si la hubiera</td></tr>
+</table>
+<p>
+  Los datos relativos al animal <b>no son datos personales de categoría especial</b>: el interesado es
+  el propietario, y los datos sanitarios de un animal no están comprendidos en el artículo 9 del RGPD.
+  La plataforma está configurada para <b>no importar ni registrar historiales clínicos, diagnósticos,
+  analíticas, medicación ni observaciones veterinarias</b>: únicamente el tipo de tratamiento y su
+  fecha, en la medida estrictamente necesaria para programar el aviso.
+</p>
+<p><b>Interesados:</b> propietarios de animales clientes del Responsable.</p>
+
+<h4><span>4.</span>Obligaciones del Encargado</h4>
+<ul>
+  <li>Tratar los datos únicamente conforme a las instrucciones documentadas del Responsable y para los fines de este anexo; informar de inmediato si una instrucción infringe, a su juicio, la normativa.</li>
+  <li>Guardar confidencialidad sobre los datos; el Encargado presta el servicio personalmente y no cede el acceso a terceros.</li>
+  <li>Aplicar las medidas técnicas y organizativas del apartado 8.</li>
+  <li>Utilizar únicamente los servicios de terceros relacionados en el apartado 7. Sus cuentas se abren <b>a nombre del Responsable</b>, desde la cuenta de Google que este facilita, por lo que dichos proveedores son encargados del tratamiento del Responsable; el Encargado, con la autorización otorgada en este anexo, las administra en nombre del Responsable, acepta en el alta las condiciones y el acuerdo de tratamiento de datos de cada proveedor y configura las regiones de la Unión Europea disponibles. <b>El Encargado no introduce ni accede a medios de pago</b>: los añade el Responsable en cada plataforma. Cualquier cambio o incorporación de proveedor se comunicará por escrito al Responsable, que podrá oponerse.</li>
+  <li>Configurar la plataforma para que toda solicitud de baja recibida por el canal de WhatsApp excluya de forma automática al destinatario de futuros envíos, y comunicarla al Responsable.</li>
+  <li>Asistir al Responsable en la atención de los derechos de los interesados (acceso, rectificación, supresión, limitación, portabilidad y oposición), comunicándole en un plazo máximo de 5 días hábiles cualquier solicitud recibida a través del canal de WhatsApp.</li>
+  <li>Asistir al Responsable en el cumplimiento de los artículos 32 a 36 del RGPD.</li>
+  <li>Notificar al Responsable, sin dilación indebida y en un plazo máximo de <b>48 horas</b> desde que tenga conocimiento, cualquier violación de la seguridad de los datos, con la información disponible para que el Responsable pueda notificarla a la autoridad de control en el plazo legal de 72 horas.</li>
+  <li>Poner a disposición del Responsable la información necesaria para demostrar el cumplimiento de este anexo y permitir auditorías razonables, previo aviso de 15 días.</li>
+  <li>Al finalizar el acuerdo, suprimir o devolver los datos conforme al apartado 6.</li>
+</ul>
+
+<h4><span>5.</span>Obligaciones del Responsable</h4>
+<ul>
+  <li>Informar a los propietarios del tratamiento de sus datos y del uso de WhatsApp como canal de aviso, mediante su política de privacidad y sus cláusulas informativas.</li>
+  <li>Disponer de base jurídica para comunicarse con ellos por WhatsApp y garantizar que los números proceden de la relación de servicio, conforme al apartado 6.7 del acuerdo principal.</li>
+  <li>Garantizar que la exportación de datos que facilita al Encargado contiene únicamente las categorías del apartado 3 y está depurada de historiales clínicos y de cualquier otro dato no necesario.</li>
+  <li>Facilitar al Encargado acceso a una cuenta de Google del Responsable y autorizarle, mediante la firma de este anexo, a crear y administrar desde ella, a nombre del Responsable, las cuentas de los servicios del apartado 7 y a aceptar sus acuerdos de tratamiento de datos; introducir el Responsable su propio medio de pago en cada plataforma, asumir el coste y mantener los servicios al corriente de pago; y facilitar la tarjeta SIM y el número de WhatsApp.</li>
+  <li>Impartir por escrito las instrucciones de tratamiento y comunicar cualquier cambio.</li>
+  <li>Atender los derechos de los interesados con la asistencia del Encargado.</li>
+</ul>
+
+<h4><span>6.</span>Conservación y destino de los datos</h4>
+<p>
+  Los datos de clientes, animales y recordatorios constituyen el registro operativo de la plataforma y
+  se conservan mientras el acuerdo esté vigente, salvo instrucción distinta del Responsable. El
+  historial de conversación se conserva durante <b>doce (12) meses</b> desde el último mensaje, con
+  borrado automático posterior. El registro maestro de la información clínica de los animales sigue
+  siendo el software de gestión del Responsable, que se rige por sus propios plazos. A la finalización
+  del acuerdo, el Encargado devolverá al Responsable los datos en formato reutilizable o los suprimirá,
+  a elección del Responsable, en un plazo máximo de <b>30 días</b>, y eliminará toda copia en su poder,
+  certificándolo por escrito, salvo que una obligación legal exija conservar alguna parte.
+</p>
+
+<h4><span>7.</span>Servicios de terceros que intervienen en el tratamiento</h4>
+<p>
+  Esta es la <b>lista única y completa</b> de servicios de terceros que intervienen en el tratamiento.
+  Sus cuentas se abren <b>a nombre del Responsable</b>, desde la cuenta de Google que este facilita, y
+  las crea y administra el Encargado con la autorización otorgada en este anexo, aceptando en el alta
+  el acuerdo de tratamiento de datos (DPA) de cada proveedor y configurando las regiones de la Unión
+  Europea donde estén disponibles. El coste lo asume el Responsable, que <b>introduce su propio medio
+  de pago en cada plataforma</b>; el Encargado no introduce ni accede a medios de pago, y accede a las
+  cuentas exclusivamente para prestar el servicio. Los importes de la columna «Coste estimado» son
+  los publicados por cada proveedor en la fecha de la firma, los fijan ellos y pueden variar; el
+  Encargado notificará por escrito cualquier cambio de coste previsible.
+</p>
+<table>
+  <tr><th>Servicio</th><th>Función</th><th>Ubicación de los datos</th><th>Garantías</th><th>Coste estimado</th></tr>
+  <tr>
+    <td>Railway</td>
+    <td>Alojamiento de la plataforma, del motor de envíos y de la conexión de WhatsApp</td>
+    <td>Región europea (Ámsterdam)</td>
+    <td>DPA de Railway · Data Privacy Framework</td>
+    <td>≈ 5 €/mes</td>
+  </tr>
+  <tr>
+    <td>Supabase (PostgreSQL)</td>
+    <td>Base de datos de clientes, animales, recordatorios y conversaciones</td>
+    <td>Región UE (Fráncfort), seleccionada al crear el proyecto</td>
+    <td>DPA de Supabase</td>
+    <td>0 €/mes (plan gratuito) · ≈ 25 €/mes si se supera su límite</td>
+  </tr>
+  <tr>
+    <td>WhatsApp · Meta Platforms Ireland Ltd.</td>
+    <td>Canal de mensajería con el propietario, sobre el número del Responsable</td>
+    <td>UE / EE. UU.</td>
+    <td>Condiciones de WhatsApp · Data Privacy Framework · con la salvedad expresa de la cláusula 6 del acuerdo principal</td>
+    <td>0 € · sin coste por mensaje al no usarse la API oficial</td>
+  </tr>
+  <tr>
+    <td>CanWid · software de gestión del Responsable</td>
+    <td>Origen de la exportación inicial de datos</td>
+    <td>Según el proveedor contratado por el Responsable</td>
+    <td>Contrato y DPA propios del Responsable</td>
+    <td>Ya contratado por el Responsable</td>
+  </tr>
+</table>
+
+<h4><span>8.</span>Medidas de seguridad</h4>
+<ul>
+  <li>Cifrado de los datos en tránsito (TLS) y en reposo en todos los servicios.</li>
+  <li>Acceso a la plataforma mediante credenciales individuales por cada persona del equipo, con doble factor y principio de mínimo privilegio.</li>
+  <li>Registro de accesos, de envíos y de ejecuciones, con trazabilidad de qué se envió, a quién y cuándo.</li>
+  <li>Configuración de los proveedores para excluir el uso de los datos en el entrenamiento de modelos y selección de regiones de la UE donde el proveedor lo permita.</li>
+  <li>Lista de exclusión automática: todo destinatario que solicite la baja queda bloqueado para futuros envíos.</li>
+  <li>Borrado automático del historial de conversación conforme al apartado 6; copias de seguridad cifradas con el mismo plazo.</li>
+  <li>Pruebas y validación con datos ficticios y números de prueba; ningún dato real de clientes se usa en entornos de prueba.</li>
+</ul>
+
+<h4><span>9.</span>Transferencias internacionales</h4>
+<p>
+  El uso de WhatsApp (Meta) y de Railway puede implicar transferencias de datos a Estados Unidos. Ambas
+  entidades están certificadas en el <b>EU-U.S. Data Privacy Framework</b> (Decisión de Ejecución (UE)
+  2023/1795), y sus acuerdos de tratamiento incorporan cláusulas contractuales tipo como garantía
+  adicional. El Encargado priorizará las regiones y opciones de residencia de datos en la Unión Europea
+  siempre que el proveedor las ofrezca.
+</p>
+
+<h4><span>10.</span>Duración y firmas</h4>
+<p>
+  Este anexo entra en vigor en la Fecha de Vigencia del acuerdo principal y permanece vigente mientras
+  el Encargado trate datos personales por cuenta del Responsable. Las obligaciones de confidencialidad
+  y de supresión sobreviven a su terminación.
+</p>
+<div class="sig">
+  <div>
+    <b>EL RESPONSABLE</b><br/>
+    <span class="cf" data-f="cliente" data-ph="nombre de la clínica">[nombre de la clínica]</span><br/>
+    <span class="cf" data-f="firmante" data-ph="firmante">[firmante]</span> ·
+    <span class="cf" data-f="cargo" data-ph="cargo">[cargo]</span>
+    <div class="line"></div>
+    Fecha: <span class="cf" data-f="fecha" data-ph="fecha">[fecha]</span>
+  </div>
+  <div>
+    <b>EL ENCARGADO</b><br/>
+    Javier Prieto Algara<br/>
+    Consultor de automatización e IA · Maestría
+    <div class="line"></div>
+    Fecha: <span class="cf" data-f="fecha" data-ph="fecha">[fecha]</span>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
