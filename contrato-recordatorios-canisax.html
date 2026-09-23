@@ -77,9 +77,6 @@ th{background:#f5f5f5;font-size:10px;letter-spacing:.1em;text-transform:uppercas
   solicite no recibir más avisos. Estas medidas reducen el riesgo, pero no lo eliminan, en los
   términos de la cláusula 6.</li>
 
-  <li><b>Bandeja de respuestas dentro de la plataforma.</b> Las respuestas de los clientes a los
-  recordatorios se muestran en el panel, donde el equipo puede leerlas y contestarlas, con indicación
-  de a qué cliente, animal y recordatorio corresponden.</li>
 
   <li><b>Pruebas completas y validación con la Clínica.</b> Pruebas internas con números de prueba y
   datos ficticios contra todos los casos de uso, calentamiento gradual del número y entrega a la
@@ -127,9 +124,9 @@ th{background:#f5f5f5;font-size:10px;letter-spacing:.1em;text-transform:uppercas
   facilitada por la Clínica y no se sincroniza en tiempo real con CanWid. Si CanWid dispusiera de una
   interfaz de programación (API) que lo permitiera, la integración se presupuestaría aparte.</li>
 
-  <li><b>Respuesta automática a los clientes.</b> La plataforma envía recordatorios y recoge las
-  respuestas; no responde por sí sola ni interpreta el contenido de los mensajes. La atención de las
-  respuestas corresponde al equipo de la Clínica.</li>
+  <li><b>Gestión de las respuestas de los clientes.</b> La plataforma únicamente envía los
+  recordatorios: no recoge, almacena ni contesta los mensajes que los clientes envíen de vuelta, que
+  llegan al teléfono de la Clínica y cuya atención corresponde en exclusiva a su equipo.</li>
 
   <li><b>Campañas comerciales, promociones o marketing por WhatsApp.</b> La plataforma envía
   recordatorios sanitarios y de cita a clientes de la Clínica; no realiza envíos publicitarios.</li>
@@ -157,7 +154,7 @@ th{background:#f5f5f5;font-size:10px;letter-spacing:.1em;text-transform:uppercas
 <h5>Dependencias y plazos</h5>
 <p>
   El plazo estimado de ejecución es de <b>4 a 5 semanas</b>. El plazo comenzará a computar cuando se
-  cumplan simultáneamente dos condiciones: la recepción del pago de implementación y la entrega por
+  cumplan simultáneamente dos condiciones: la recepción del primer pago de implementación y la entrega por
   parte de la Clínica de los accesos, credenciales y materiales necesarios (en particular, la
   exportación de datos de CanWid, la tarjeta SIM y el número de WhatsApp, el acceso a una cuenta de
   Google de la Clínica, el listado de tratamientos con sus plazos y ventanas, así como la introducción
@@ -184,13 +181,13 @@ th{background:#f5f5f5;font-size:10px;letter-spacing:.1em;text-transform:uppercas
 <h4><span>3.</span>Compensación y pagos</h4>
 <table>
   <tr><th>Concepto</th><th>Importe</th><th>Momento</th></tr>
-  <tr><td>Implementación de la plataforma · pago único</td><td><b>500 €</b></td><td>A la firma de este acuerdo. Activa el proyecto.</td></tr>
-  <tr><td>Mantenimiento mensual</td><td><b>100 €/mes</b></td><td>Desde la entrega. Facturado mensualmente.</td></tr>
+  <tr><td>Implementación de la plataforma</td><td><b>500 € + IVA</b></td><td>A elección de la Clínica: en un único pago a la firma de este acuerdo, o en dos pagos de <b>250 € + IVA</b> cada uno, el primero a la firma y el segundo al mes siguiente. El primer pago activa el proyecto.</td></tr>
+  <tr><td>Mantenimiento mensual</td><td><b>100 €/mes + IVA</b></td><td>Desde la entrega. Facturado mensualmente.</td></tr>
 </table>
 <p>
-  <b>Total de la implementación: 500 €.</b> Los pagos se realizarán mediante
+  <b>Total de la implementación: 500 € + IVA.</b> Los pagos se realizarán mediante
   <span class="cf" data-f="pago" data-ph="forma de pago">[forma de pago]</span>. El Consultor emitirá
-  factura por cada pago. Los importes se entienden sin impuestos, que se aplicarán conforme a la
+  factura por cada pago. Los importes indicados no incluyen IVA, que se aplicará conforme a la
   legislación vigente.
 </p>
 
@@ -226,7 +223,7 @@ th{background:#f5f5f5;font-size:10px;letter-spacing:.1em;text-transform:uppercas
 <p>
   El acuerdo permanecerá en vigor desde la Fecha de Vigencia hasta la entrega y aceptación de la
   plataforma y la finalización del mantenimiento contratado. La Clínica podrá terminarlo con <b>30 días
-  de preaviso</b> por escrito; en ese caso el pago de implementación no será reembolsable y la Clínica
+  de preaviso</b> por escrito; en ese caso los pagos de implementación ya realizados no serán reembolsables y la Clínica
   abonará el trabajo efectivamente realizado hasta la fecha. El Consultor podrá terminarlo con el mismo
   preaviso, completando el trabajo en curso en la medida de lo posible y facilitando la documentación y
   los accesos necesarios para la continuidad de la plataforma. Cualquiera de las partes podrá
@@ -430,7 +427,7 @@ th{background:#f5f5f5;font-size:10px;letter-spacing:.1em;text-transform:uppercas
 <p>
   Se distinguen dos categorías: la <b>Implementación Específica</b> (la configuración concreta para la
   Clínica: su calendario de tratamientos y ventanas, sus plantillas de mensaje, su base de clientes y
-  animales, su historial de envíos y respuestas, y los ajustes hechos a su medida) y la <b>Metodología
+  animales, su historial de envíos, y los ajustes hechos a su medida) y la <b>Metodología
   Base</b> (el código y la arquitectura general de la plataforma, el motor de recordatorios, la lógica
   de envío y de mitigación de riesgo, y las estructuras genéricas de datos y de mensajes). El Consultor
   cede a la Clínica todos los derechos de uso, modificación y reproducción sobre la Implementación
@@ -542,8 +539,7 @@ th{background:#f5f5f5;font-size:10px;letter-spacing:.1em;text-transform:uppercas
   <tr><td>Identificativos</td><td>Nombre y apellidos del propietario</td></tr>
   <tr><td>Contacto</td><td>Número de teléfono (WhatsApp) y, si el Responsable lo aporta, correo electrónico</td></tr>
   <tr><td>Animal</td><td>Nombre, especie y, en su caso, raza y fecha de nacimiento</td></tr>
-  <tr><td>Recordatorio</td><td>Tipo de tratamiento o cita, fecha programada del aviso y estado (pendiente, enviado, respondido, dado de baja)</td></tr>
-  <tr><td>Conversación</td><td>Mensaje enviado y respuesta del propietario, si la hubiera</td></tr>
+  <tr><td>Recordatorio</td><td>Tipo de tratamiento o cita, fecha programada del aviso y estado (pendiente, enviado, dado de baja)</td></tr>
 </table>
 <p>
   Los datos relativos al animal <b>no son datos personales de categoría especial</b>: el interesado es
@@ -613,7 +609,7 @@ th{background:#f5f5f5;font-size:10px;letter-spacing:.1em;text-transform:uppercas
   </tr>
   <tr>
     <td>Supabase (PostgreSQL)</td>
-    <td>Base de datos de clientes, animales, recordatorios y conversaciones</td>
+    <td>Base de datos de clientes, animales y recordatorios</td>
     <td>Región UE (Fráncfort), seleccionada al crear el proyecto</td>
     <td>DPA de Supabase</td>
     <td>0 €/mes (plan gratuito) · ≈ 25 €/mes si se supera su límite</td>

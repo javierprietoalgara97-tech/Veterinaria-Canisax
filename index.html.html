@@ -700,6 +700,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
   text-decoration-color:var(--gold);text-decoration-thickness:3px;
 }
 .price-line .now{color:var(--gold-light);font-size:1.35em;font-weight:800;letter-spacing:-0.04em}
+.price-line .iva{font-size:0.5em;font-weight:600;color:var(--text-muted);letter-spacing:0}
 
 .inv{
   display:grid;
@@ -1987,7 +1988,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
     <div class="g-row g-miles">
       <div class="g-label"></div>
       <div class="g-cells">
-        <div class="g-mile" style="grid-column:1"><i></i>Inicio · pago 500 €</div>
+        <div class="g-mile" style="grid-column:1"><i></i>Inicio · primer pago</div>
         <div class="g-mile soft" style="grid-column:3"><i></i>Número calentado</div>
         <div class="g-mile soft" style="grid-column:4"><i></i>Validación</div>
         <div class="g-mile end" style="grid-column:5"><i></i>Entrega</div>
@@ -2210,7 +2211,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
       <div class="fine">
         Estimación orientativa con vuestros propios números: tiempo de personal a <b>10 €/hora</b>
         más los clientes que vuelven gracias al aviso. Inversión año 1: 500 € de implementación
-        + 100 €/mes = 1.700 €. No incluye las herramientas de terceros (unos 5 €/mes).
+        + 100 €/mes = 1.700 € (sin IVA). No incluye las herramientas de terceros (unos 5 €/mes).
       </div>
     </div>
   </div>
@@ -2284,7 +2285,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
     <div class="kicker reveal r1">Vuestra inversión hoy</div>
     <div class="price-line reveal r2">
       <span>Vale <s>1.000 €</s></span>
-      <span>Vuestra inversión: <span class="now">500 €</span></span>
+      <span>Vuestra inversión: <span class="now">500 €</span> <span class="iva">+ IVA</span></span>
     </div>
   </div>
   <div class="inv reveal r3">
@@ -2306,16 +2307,16 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
 
     <div>
       <div class="pay main">
-        <span class="pay-tag">Pago único</span>
+        <span class="pay-tag">Implementación</span>
         <div>
           <div class="pay-t">Implementación de la plataforma</div>
-          <div class="pay-s">Completa, entregada y funcionando en 5 semanas. Un solo pago al firmar, sin plazos ni financiación.</div>
+          <div class="pay-s">Completa, entregada y funcionando en 5 semanas. Elegís cómo pagarla: en un solo pago al firmar o en dos pagos, sin coste extra.</div>
           <div class="pay-split">
-            <span><b>500 €</b> al firmar · activa el proyecto</span>
-            <span>Sin más pagos de implementación</span>
+            <span><b>Opción 1</b> · 500 € + IVA al firmar</span>
+            <span><b>Opción 2</b> · 250 € + IVA al firmar y 250 € + IVA al mes siguiente</span>
           </div>
         </div>
-        <div class="pay-p">500 €</div>
+        <div class="pay-p">500 €<small> + IVA</small></div>
       </div>
 
       <div class="pay">
@@ -2323,7 +2324,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
           <div class="pay-t">Mantenimiento mensual</div>
           <div class="pay-s">Desde la entrega. <b>3 horas al mes</b> de soporte directo, ajustes, plantillas nuevas y tipos de recordatorio nuevos, más una <b>reunión de seguimiento de 30 minutos</b> si hace falta. Sin permanencia: se cancela con 30 días de aviso. Las herramientas de terceros (unos 5 €/mes) van aparte.</div>
         </div>
-        <div class="pay-p">100 €<small>/mes</small></div>
+        <div class="pay-p">100 €<small>/mes + IVA</small></div>
       </div>
 
       <div class="pay-foot">
@@ -2379,7 +2380,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
   <div class="pay2 reveal r4">
     <div class="pcard fast">
       <div class="lbl">Bizum <span class="pill">El más rápido</span></div>
-      <h3>500 € <small>· pago único de implementación</small></h3>
+      <h3>500 € + IVA <small>· o primer pago de 250 € + IVA</small></h3>
       <p class="hint">Lo enviáis ahora desde el banco y lo confirmamos en la llamada. Sin esperas ni comisiones.</p>
       <div class="field">
         <div><div class="f-l">Teléfono</div><div class="f-v">697 123 206</div></div>
@@ -2398,7 +2399,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
 
     <div class="pcard">
       <div class="lbl">Transferencia bancaria</div>
-      <h3>500 € <small>· pago único de implementación</small></h3>
+      <h3>500 € + IVA <small>· o primer pago de 250 € + IVA</small></h3>
       <p class="hint">Te guío para hacerla en el momento. Suele llegar el mismo día si es entre bancos españoles.</p>
       <div class="field">
         <div><div class="f-l">Titular</div><div class="f-v">Javier Prieto Algara</div></div>
@@ -2586,7 +2587,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
 <h5>Dependencias y plazos</h5>
 <p>
   El plazo estimado de ejecución es de <b>4 a 5 semanas</b>. El plazo comenzará a computar cuando se
-  cumplan simultáneamente dos condiciones: la recepción del pago de implementación y la entrega por
+  cumplan simultáneamente dos condiciones: la recepción del primer pago de implementación y la entrega por
   parte de la Clínica de los accesos, credenciales y materiales necesarios (en particular, la
   exportación de datos de CanWid, la tarjeta SIM y el número de WhatsApp, el acceso a una cuenta de
   Google de la Clínica, el listado de tratamientos con sus plazos y ventanas, así como la introducción
@@ -2613,13 +2614,13 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
 <h4><span>3.</span>Compensación y pagos</h4>
 <table>
   <tr><th>Concepto</th><th>Importe</th><th>Momento</th></tr>
-  <tr><td>Implementación de la plataforma · pago único</td><td><b>500 €</b></td><td>A la firma de este acuerdo. Activa el proyecto.</td></tr>
-  <tr><td>Mantenimiento mensual</td><td><b>100 €/mes</b></td><td>Desde la entrega. Facturado mensualmente.</td></tr>
+  <tr><td>Implementación de la plataforma</td><td><b>500 € + IVA</b></td><td>A elección de la Clínica: en un único pago a la firma de este acuerdo, o en dos pagos de <b>250 € + IVA</b> cada uno, el primero a la firma y el segundo al mes siguiente. El primer pago activa el proyecto.</td></tr>
+  <tr><td>Mantenimiento mensual</td><td><b>100 €/mes + IVA</b></td><td>Desde la entrega. Facturado mensualmente.</td></tr>
 </table>
 <p>
-  <b>Total de la implementación: 500 €.</b> Los pagos se realizarán mediante
+  <b>Total de la implementación: 500 € + IVA.</b> Los pagos se realizarán mediante
   <span class="cf" data-f="pago" data-ph="forma de pago">[forma de pago]</span>. El Consultor emitirá
-  factura por cada pago. Los importes se entienden sin impuestos, que se aplicarán conforme a la
+  factura por cada pago. Los importes indicados no incluyen IVA, que se aplicará conforme a la
   legislación vigente.
 </p>
 
@@ -2655,7 +2656,7 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
 <p>
   El acuerdo permanecerá en vigor desde la Fecha de Vigencia hasta la entrega y aceptación de la
   plataforma y la finalización del mantenimiento contratado. La Clínica podrá terminarlo con <b>30 días
-  de preaviso</b> por escrito; en ese caso el pago de implementación no será reembolsable y la Clínica
+  de preaviso</b> por escrito; en ese caso los pagos de implementación ya realizados no serán reembolsables y la Clínica
   abonará el trabajo efectivamente realizado hasta la fecha. El Consultor podrá terminarlo con el mismo
   preaviso, completando el trabajo en curso en la medida de lo posible y facilitando la documentación y
   los accesos necesarios para la continuidad de la plataforma. Cualquiera de las partes podrá
@@ -3110,8 +3111,8 @@ input[type=range].rng:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,0.25)}
     </div>
 
     <div class="doc-foot">
-      <span class="tot">500 € <small>implementación · pago único</small></span>
-      <span class="tot">100 €/mes <small>mantenimiento</small></span>
+      <span class="tot">500 € + IVA <small>implementación · en 1 o 2 pagos</small></span>
+      <span class="tot">100 €/mes + IVA <small>mantenimiento</small></span>
       <span class="sp"></span>
       <button class="btn-doc" id="docPago" type="button">Ver cómo pagar</button>
       <button class="btn-doc primary" id="docPdf2" type="button">Descargar PDF</button>
